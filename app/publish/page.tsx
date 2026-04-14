@@ -11,9 +11,13 @@ export default function PublishPage() {
       }}
     >
       {/* TITOLO */}
-      <h1 style={{ fontSize: 34, marginBottom: 10 }}>
-        Pubblica il tuo immobile
-      </h1>
+      <h1 style={{ fontSize: 40, marginBottom: 10 }}>
+  Vendi casa senza esporsi.
+</h1>
+
+<p style={{ fontSize: 18, color: "#555", marginBottom: 30 }}>
+  Ricevi offerte anonime da acquirenti verificati e decidi tu se e quando farti contattare.
+</p>
 
       <p style={{ color: "#666", marginBottom: 30 }}>
         Nessun vincolo. Nessuna pressione. Decidi tu tutto.
