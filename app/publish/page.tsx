@@ -69,7 +69,7 @@ lineHeight: 1.5, color: "#555", marginBottom: 30 }}>
         <textarea placeholder="Descrizione" style={{ ...inputStyle, height: 120 }} />
 
        <button style={buttonStyle}>
-  Inizia ora
+ Ricevi offerte ora
 </button>
       </form>
     </div>
