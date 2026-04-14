@@ -24,12 +24,13 @@ lineHeight: 1.5, color: "#555", marginBottom: 30 }}>
 </p>
       {/* BOX VALORE */}
       <div
-        style={{
-          background: "#f8f8f8",
-          border: "1px solid #eee",
-          borderRadius: 10,
-          padding: 20,
-          marginBottom: 30,
+       style={{
+  background: "#ffffff",
+  borderRadius: 16,
+  padding: 25,
+  marginBottom: 40,
+  boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+}}
         }}
       >
         <p><strong>Privacy totale:</strong> i tuoi dati non sono pubblici</p>
