@@ -18,11 +18,6 @@ export default function PublishPage() {
 <p style={{ fontSize: 18, color: "#555", marginBottom: 30 }}>
   Ricevi offerte anonime da acquirenti verificati e decidi tu se e quando farti contattare.
 </p>
-
-      <p style={{ color: "#666", marginBottom: 30 }}>
-        Nessun vincolo. Nessuna pressione. Decidi tu tutto.
-      </p>
-
       {/* BOX VALORE */}
       <div
         style={{
