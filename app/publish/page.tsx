@@ -84,11 +84,13 @@ const inputStyle = {
 };
 
 const buttonStyle = {
-  background: "black",
-  color: "white",
-  padding: "14px",
-  borderRadius: 6,
+  background: "#000",
+  color: "#fff",
+  padding: "16px",
+  borderRadius: 10,
   border: "none",
   cursor: "pointer",
   fontSize: 16,
+  fontWeight: "bold",
+  transition: "all 0.2s ease",
 };
