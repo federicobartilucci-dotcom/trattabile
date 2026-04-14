@@ -2,39 +2,101 @@
 
 export default function PublishPage() {
   return (
-    <div style={{ padding: 20, maxWidth: 800, margin: "0 auto" }}>
-      
-      <h1 style={{ fontSize: 32, marginBottom: 10 }}>
+    <div
+      style={{
+        padding: 40,
+        maxWidth: 700,
+        margin: "0 auto",
+        fontFamily: "Arial, sans-serif",
+      }}
+    >
+      <h1 style={{ fontSize: 34, marginBottom: 10 }}>
         Pubblica il tuo immobile
       </h1>
 
-      <p style={{ marginBottom: 20, color: "#555" }}>
-        Le offerte non sono vincolanti e non costituiscono proposta contrattuale.
+      <p style={{ color: "#666", marginBottom: 30 }}>
+        Nessun vincolo. Nessuna pressione. Decidi tu tutto.
       </p>
 
-      {/* VALORE DIFFERENZIANTE */}
-      <div style={{ 
-        background: "#f5f5f5", 
-        padding: 15, 
-        marginBottom: 20,
-        borderRadius: 8
-      }}>
-        <p><strong>✔ Privacy totale:</strong> i tuoi dati non vengono mai condivisi pubblicamente</p>
-        <p><strong>✔ Controllo totale:</strong> decidi tu se e quando rivelare la tua identità</p>
-        <p><strong>✔ Sicurezza:</strong> vedrai i dati dell’acquirente solo se accetti l’offerta</p>
-        <p><strong>✔ Nessun vincolo:</strong> né venditore né acquirente sono obbligati in alcun modo</p>
+      {/* BOX VALORE */}
+      <div
+        style={{
+          background: "#f9fafb",
+          border: "1px solid #e5e7eb",
+          borderRadius: 10,
+          padding: 20,
+          marginBottom: 30,
+        }}
+      >
+        <p><strong>✔ Privacy totale</strong> — i tuoi dati non sono mai pubblici</p>
+        <p><strong>✔ Controllo totale</strong> — scegli tu quando esporti</p>
+        <p><strong>✔ Solo acquirenti reali</strong> — budget verificato</p>
+        <p><strong>✔ Nessun obbligo</strong> — nessuna offerta è vincolante</p>
       </div>
 
       {/* SLOGAN */}
       <div style={{ marginBottom: 30 }}>
-        <p style={{ fontStyle: "italic" }}>
-          “Nessuno saprà mai a che prezzo sei disposto a vendere… finché non accetti.”
+        <p style={{ fontStyle: "italic", fontSize: 16 }}>
+          Nessuno saprà mai a che prezzo sei disposto a vendere.
+          Finché non decidi tu.
         </p>
 
         <p style={{ fontStyle: "italic", marginTop: 10 }}>
-          “Solo trattative reali: chi fa un’offerta ha già verificato il proprio budget 
-          (fondi o pre-delibera). Puntiamo dritti al rogito.”
+          Solo trattative reali. Chi fa un’offerta può davvero comprare.
         </p>
+      </div>
+
+      {/* FORM */}
+      <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          alert("Immobile pubblicato (demo)");
+        }}
+        style={{
+          display: "flex",
+          flexDirection: "column",
+          gap: 15,
+        }}
+      >
+        <input
+          placeholder="Titolo annuncio"
+          style={inputStyle}
+        />
+
+        <input
+          placeholder="Prezzo"
+          style={inputStyle}
+        />
+
+        <textarea
+          placeholder="Descrizione"
+          style={{ ...inputStyle, height: 100 }}
+        />
+
+        <button style={buttonStyle}>
+          Pubblica immobile
+        </button>
+      </form>
+    </div>
+  );
+}
+
+const inputStyle = {
+  padding: 12,
+  borderRadius: 8,
+  border: "1px solid #ddd",
+  fontSize: 14,
+};
+
+const buttonStyle = {
+  background: "black",
+  color: "white",
+  padding: "12px",
+  borderRadius: 8,
+  border: "none",
+  cursor: "pointer",
+  fontSize: 16,
+};        </p>
       </div>
 
       {/* FORM */}
