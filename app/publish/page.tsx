@@ -63,9 +63,9 @@ export default function PublishPage() {
         <input placeholder="Prezzo" style={inputStyle} />
         <textarea placeholder="Descrizione" style={{ ...inputStyle, height: 120 }} />
 
-        <button style={buttonStyle}>
-          Pubblica immobile
-        </button>
+       <button style={buttonStyle}>
+  Inizia ora
+</button>
       </form>
     </div>
   );
