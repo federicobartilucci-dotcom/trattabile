@@ -28,17 +28,16 @@ export default function Home() {
         <li>Ricevi offerte anonime</li>
         <li>Scegli se e quando rispondere</li>
       </ol>
-   <Link href="/publish">
-  <span style={{
-    display: "inline-block",
-    padding: 10,
-    marginTop: 20,
-    background: "black",
-    color: "white",
-    cursor: "pointer"
-  }}>
-    Pubblica immobile
-  </span>
+   <Link href="/publish" style={{
+  display: "inline-block",
+  padding: 10,
+  marginTop: 20,
+  background: "black",
+  color: "white",
+  textDecoration: "none"
+}}>
+  Pubblica immobile
+</Link>
 </Link>
     </div>
   );
