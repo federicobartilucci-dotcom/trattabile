@@ -16,6 +16,7 @@ maxWidth: 800,
   alignItems: "center",
   marginBottom: 40
 }}>
+ <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
   <div>
     <div style={{ fontSize: 20, fontWeight: "bold" }}>
       TRATTABILE
@@ -24,6 +25,43 @@ maxWidth: 800,
       Offerte immobiliari riservate
     </div>
   </div>
+</div>
+<div style={{
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  marginBottom: 40
+}}>
+
+  <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+    <div>
+      <div style={{ fontSize: 20, fontWeight: "bold" }}>
+        TRATTABILE
+      </div>
+      <div style={{ fontSize: 12, color: "#777" }}>
+        Offerte immobiliari riservate
+         background: "transparent",
+  border: "1px solid #ddd",
+  padding: "8px 14px",
+  borderRadius: 8,
+  cursor: "pointer"
+}}>
+      </div>
+    </div>
+<button style={{
+  background: "transparent",
+  border: "1px solid #ddd",
+  padding: "8px 14px",
+  borderRadius: 8,
+  cursor: "pointer"
+}}>
+  Accedi
+</button>
+  </div>
+
+  👉 QUI INCOLLI (CTRL + V)
+
+</div>
 </div>
       {/* TITOLO */}
      <h1 style={{
