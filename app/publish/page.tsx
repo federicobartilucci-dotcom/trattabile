@@ -10,6 +10,21 @@ maxWidth: 800,
         fontFamily: "Arial, sans-serif",
       }}
     >
+      <div style={{
+  display: "flex",
+  justifyContent: "space-between",
+  alignItems: "center",
+  marginBottom: 40
+}}>
+  <div>
+    <div style={{ fontSize: 20, fontWeight: "bold" }}>
+      TRATTABILE
+    </div>
+    <div style={{ fontSize: 12, color: "#777" }}>
+      Offerte immobiliari riservate
+    </div>
+  </div>
+</div>
       {/* TITOLO */}
      <h1 style={{
   fontSize: 48,
