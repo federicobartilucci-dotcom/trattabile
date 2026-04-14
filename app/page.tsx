@@ -38,7 +38,6 @@ export default function Home() {
 }}>
   Pubblica immobile
 </Link>
-</Link>
     </div>
   );
 }
