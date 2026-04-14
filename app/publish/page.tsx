@@ -10,6 +10,7 @@ export default function PublishPage() {
         fontFamily: "Arial, sans-serif",
       }}
     >
+      {/* TITOLO */}
       <h1 style={{ fontSize: 34, marginBottom: 10 }}>
         Pubblica il tuo immobile
       </h1>
@@ -21,28 +22,29 @@ export default function PublishPage() {
       {/* BOX VALORE */}
       <div
         style={{
-          background: "#f9fafb",
-          border: "1px solid #e5e7eb",
+          background: "#f8f8f8",
+          border: "1px solid #eee",
           borderRadius: 10,
           padding: 20,
           marginBottom: 30,
         }}
       >
-        <p><strong>✔ Privacy totale</strong> — i tuoi dati non sono mai pubblici</p>
-        <p><strong>✔ Controllo totale</strong> — scegli tu quando esporti</p>
-        <p><strong>✔ Solo acquirenti reali</strong> — budget verificato</p>
-        <p><strong>✔ Nessun obbligo</strong> — nessuna offerta è vincolante</p>
+        <p><strong>Privacy totale:</strong> i tuoi dati non sono pubblici</p>
+        <p><strong>Controllo totale:</strong> decidi tu se e quando rivelarti</p>
+        <p><strong>Solo acquirenti reali:</strong> budget verificato</p>
+        <p><strong>Nessun vincolo:</strong> nessuna offerta è obbligatoria</p>
+        <p><strong>Accesso ai contatti:</strong> solo se accetti l’offerta</p>
       </div>
 
       {/* SLOGAN */}
       <div style={{ marginBottom: 30 }}>
-        <p style={{ fontStyle: "italic", fontSize: 16 }}>
-          Nessuno saprà mai a che prezzo sei disposto a vendere.
-          Finché non decidi tu.
+        <p style={{ fontStyle: "italic" }}>
+          “Nessuno saprà mai a che prezzo sei disposto a vendere… finché non accetti.”
         </p>
 
         <p style={{ fontStyle: "italic", marginTop: 10 }}>
-          Solo trattative reali. Chi fa un’offerta può davvero comprare.
+          “Solo trattative reali. Chi fa un’offerta ha già verificato il proprio budget.
+          Puntiamo dritti al rogito.”
         </p>
       </div>
 
@@ -58,20 +60,9 @@ export default function PublishPage() {
           gap: 15,
         }}
       >
-        <input
-          placeholder="Titolo annuncio"
-          style={inputStyle}
-        />
-
-        <input
-          placeholder="Prezzo"
-          style={inputStyle}
-        />
-
-        <textarea
-          placeholder="Descrizione"
-          style={{ ...inputStyle, height: 100 }}
-        />
+        <input placeholder="Titolo annuncio" style={inputStyle} />
+        <input placeholder="Prezzo" style={inputStyle} />
+        <textarea placeholder="Descrizione" style={{ ...inputStyle, height: 120 }} />
 
         <button style={buttonStyle}>
           Pubblica immobile
@@ -83,63 +74,17 @@ export default function PublishPage() {
 
 const inputStyle = {
   padding: 12,
-  borderRadius: 8,
-  border: "1px solid #ddd",
+  borderRadius: 6,
+  border: "1px solid #ccc",
   fontSize: 14,
 };
 
 const buttonStyle = {
   background: "black",
   color: "white",
-  padding: "12px",
-  borderRadius: 8,
+  padding: "14px",
+  borderRadius: 6,
   border: "none",
   cursor: "pointer",
   fontSize: 16,
-};        </p>
-      </div>
-
-      {/* FORM */}
-      <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          alert("Immobile pubblicato (demo)");
-        }}
-      >
-        <div style={{ marginBottom: 10 }}>
-          <input
-            placeholder="Titolo annuncio"
-            style={{ width: "100%", padding: 10 }}
-          />
-        </div>
-
-        <div style={{ marginBottom: 10 }}>
-          <input
-            placeholder="Prezzo"
-            style={{ width: "100%", padding: 10 }}
-          />
-        </div>
-
-        <div style={{ marginBottom: 10 }}>
-          <textarea
-            placeholder="Descrizione"
-            style={{ width: "100%", padding: 10 }}
-          />
-        </div>
-
-        <button
-          type="submit"
-          style={{
-            background: "black",
-            color: "white",
-            padding: "10px 20px",
-            border: "none",
-            cursor: "pointer",
-          }}
-        >
-          Pubblica immobile
-        </button>
-      </form>
-    </div>
-  );
-}
+};
