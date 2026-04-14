@@ -29,9 +29,16 @@ export default function Home() {
         <li>Scegli se e quando rispondere</li>
       </ol>
    <Link href="/publish">
-  <button style={{ padding: 10, marginTop: 20 }}>
+  <span style={{
+    display: "inline-block",
+    padding: 10,
+    marginTop: 20,
+    background: "black",
+    color: "white",
+    cursor: "pointer"
+  }}>
     Pubblica immobile
-  </button>
+  </span>
 </Link>
     </div>
   );
