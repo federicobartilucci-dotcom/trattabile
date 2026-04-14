@@ -27,7 +27,11 @@ export default function Home() {
         <li>Ricevi offerte anonime</li>
         <li>Scegli se e quando rispondere</li>
       </ol>
-
+<a href="/publish">
+  <button style={{ padding: 10, marginTop: 20 }}>
+    Pubblica immobile
+  </button>
+</a>
     </div>
   );
 }
