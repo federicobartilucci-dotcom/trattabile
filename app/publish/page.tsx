@@ -4,18 +4,22 @@ export default function PublishPage() {
   return (
     <div
       style={{
-        padding: 40,
-        maxWidth: 700,
+     padding: "100px 20px",
+maxWidth: 800,
         margin: "0 auto",
         fontFamily: "Arial, sans-serif",
       }}
     >
       {/* TITOLO */}
-      <h1 style={{ fontSize: 40, marginBottom: 10 }}>
-  Vendi casa senza esporsi.
+     <h1 style={{
+  fontSize: 48,
+  lineHeight: 1.2,
+  fontWeight: "bold"
+}}>
+  Vendi casa senza esporti.
 </h1>
-
-<p style={{ fontSize: 18, color: "#555", marginBottom: 30 }}>
+  <p style={{ fontSize: 20,
+lineHeight: 1.5, color: "#555", marginBottom: 30 }}>
   Ricevi offerte anonime da acquirenti verificati e decidi tu se e quando farti contattare.
 </p>
       {/* BOX VALORE */}
