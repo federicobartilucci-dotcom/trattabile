@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Home() {
   return (
     <div style={{ padding: 40, maxWidth: 900, margin: "0 auto" }}>
@@ -27,11 +28,11 @@ export default function Home() {
         <li>Ricevi offerte anonime</li>
         <li>Scegli se e quando rispondere</li>
       </ol>
-<a href="/publish">
+   <Link href="/publish">
   <button style={{ padding: 10, marginTop: 20 }}>
     Pubblica immobile
   </button>
-</a>
+</Link>
     </div>
   );
 }
