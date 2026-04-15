@@ -4,108 +4,91 @@ export default function PublishPage() {
   return (
     <div
       style={{
-     padding: "100px 20px",
-maxWidth: 800,
+        padding: "100px 20px",
+        maxWidth: 800,
         margin: "0 auto",
         fontFamily: "Arial, sans-serif",
       }}
     >
-      <div style={{
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  marginBottom: 40
-}}>
- <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-  <div>
-    <div style={{ fontSize: 20, fontWeight: "bold" }}>
-      TRATTABILE
-    </div>
-    <div style={{ fontSize: 12, color: "#777" }}>
-      Offerte immobiliari riservate
-    </div>
-  </div>
-</div>
-<div style={{
-  display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
-  marginBottom: 40
-}}>
+      {/* HEADER */}
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginBottom: 40,
+        }}
+      >
+        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
+          <div style={{ fontSize: 20, fontWeight: "bold" }}>
+            TRATTABILE
+          </div>
 
-  <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-    <div>
-      <div style={{ fontSize: 20, fontWeight: "bold" }}>
-        TRATTABILE
+          <div
+            style={{
+              fontSize: 12,
+              color: "#777",
+              background: "transparent",
+              border: "1px solid #ddd",
+              padding: "8px 14px",
+              borderRadius: 8,
+              cursor: "pointer",
+            }}
+          >
+            Offerte immobiliari riservate
+          </div>
+        </div>
+
+        <button
+          style={{
+            background: "transparent",
+            border: "1px solid #ddd",
+            padding: "8px 14px",
+            borderRadius: 8,
+            cursor: "pointer",
+          }}
+        >
+          Accedi
+        </button>
       </div>
-    <div style={{
-  fontSize: 12,
-  color: "#777",
-  background: "transparent",
-  border: "1px solid #ddd",
-  padding: "8px 14px",
-  borderRadius: 8,
-  cursor: "pointer"
-}}>
-  Offerte immobiliari riservate
-</div>
-      </div>
-    </div>
-<button style={{
-  background: "transparent",
-  border: "1px solid #ddd",
-  padding: "8px 14px",
-  borderRadius: 8,
-  cursor: "pointer",
-}}>
-  Accedi
-</button>
-  </div>
 
-  👉 QUI INCOLLI (CTRL + V)
-
-</div>
-</div>
       {/* TITOLO */}
-     <h1 style={{
-  fontSize: 48,
-  lineHeight: 1.2,
-  fontWeight: "bold"
-}}>
-  Vendi casa senza esporti.
-</h1>
-  <p style={{ fontSize: 20,
-lineHeight: 1.5, color: "#555", marginBottom: 30 }}>
-  Ricevi offerte anonime da acquirenti verificati e decidi tu se e quando farti contattare.
-</p>
+      <h1
+        style={{
+          fontSize: 48,
+          lineHeight: 1.2,
+          fontWeight: "bold",
+        }}
+      >
+        Vendi casa senza esporti.
+      </h1>
+
+      <p
+        style={{
+          fontSize: 16,
+          lineHeight: 1.5,
+          color: "#555",
+          marginTop: 10,
+          marginBottom: 30,
+        }}
+      >
+        Ricevi offerte anonime da acquirenti verificati e decidi tu se e quando farti contattare.
+      </p>
+
       {/* BOX VALORE */}
       <div
-       style={{
-  background: "#ffffff",
-  borderRadius: 16,
-  padding: 25,
-  marginBottom: 40,
-  boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
-}}
+        style={{
+          background: "#f7f7f7",
+          borderRadius: 16,
+          padding: 25,
+          marginBottom: 40,
+          boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
         }}
       >
         <p><strong>Privacy totale:</strong> i tuoi dati non sono pubblici</p>
         <p><strong>Controllo totale:</strong> decidi tu se e quando rivelarti</p>
         <p><strong>Solo acquirenti reali:</strong> budget verificato</p>
         <p><strong>Nessun vincolo:</strong> nessuna offerta è obbligatoria</p>
-        <p><strong>Accesso ai contatti:</strong> solo se accetti l’offerta</p>
-      </div>
-
-      {/* SLOGAN */}
-      <div style={{ marginBottom: 30 }}>
-        <p style={{ fontStyle: "italic" }}>
-          “Nessuno saprà mai a che prezzo sei disposto a vendere… finché non accetti.”
-        </p>
-
-        <p style={{ fontStyle: "italic", marginTop: 10 }}>
-          “Solo trattative reali. Chi fa un’offerta ha già verificato il proprio budget.
-          Puntiamo dritti al rogito.”
-        </p>
       </div>
 
       {/* FORM */}
@@ -124,9 +107,9 @@ lineHeight: 1.5, color: "#555", marginBottom: 30 }}>
         <input placeholder="Prezzo" style={inputStyle} />
         <textarea placeholder="Descrizione" style={{ ...inputStyle, height: 120 }} />
 
-       <button style={buttonStyle}>
- Ricevi offerte ora
-</button>
+        <button style={buttonStyle}>
+          Ricevi offerte ora
+        </button>
       </form>
     </div>
   );
