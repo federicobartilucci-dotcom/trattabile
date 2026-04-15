@@ -1,87 +1,78 @@
 "use client";
 
+import { useState } from "react";
+
 export default function PublishPage() {
+  const [title, setTitle] = useState("");
+  const [price, setPrice] = useState("");
+  const [description, setDescription] = useState("");
+
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+
+    await fetch("/api/properties", {
+      method: "POST",
+      body: JSON.stringify({ title, price, description }),
+    });
+
+    alert("Immobile pubblicato!");
+    window.location.href = "/properties";
+  };
+
   return (
-    <div style={{ padding: "100px 20px", maxWidth: 800, margin: "0 auto" }}>
+    <div style={{ padding: 40, maxWidth: 600, margin: "0 auto" }}>
+      
+      <h1 style={{ marginBottom: 20 }}>Pubblica il tuo immobile</h1>
 
-      {/* HEADER */}
-<div style={{ display: "flex", justifyContent: "space-between", marginBottom: 40 }}>
-  <div>
-    <div style={{ fontSize: 20, fontWeight: "bold" }}>TRATTABILE</div>
-    <div style={{ fontSize: 12, color: "#777" }}>
-      Offerte immobiliari riservate
-    </div>
-  </div>
-
-  <button
-    style={{
-      background: "transparent",
-      border: "1px solid #ddd",
-      padding: "8px 14px",
-      borderRadius: 8,
-      cursor: "pointer",
-    }}
-  >
-    Accedi
-  </button>
-</div>
-
-      {/* TITOLO */}
-      <h1 style={{ fontSize: 40, fontWeight: "bold" }}>
-        Vendi casa senza esporti.
-      </h1>
-
-      <p style={{ color: "#555", marginTop: 10 }}>
-        Ricevi offerte anonime da acquirenti verificati.
-      </p>
-
-      {/* BOX */}
-      <div
-        style={{
-          background: "#f5f5f5",
-          padding: 20,
-          borderRadius: 10,
-          marginTop: 30,
-        }}
-      >
-        <p>✔️ Privacy totale</p>
-        <p>✔️ Solo acquirenti verificati</p>
-        <p>✔️ Nessun vincolo</p>
-      </div>
-
-      {/* FORM */}
       <form
-        onSubmit={(e) => {
-          e.preventDefault();
-          alert("Demo invio");
-        }}
+        onSubmit={handleSubmit}
         style={{
           display: "flex",
           flexDirection: "column",
-          gap: 10,
-          marginTop: 30,
+          gap: 15,
         }}
       >
-        <input placeholder="Titolo annuncio" style={inputStyle} />
-        <input placeholder="Prezzo" style={inputStyle} />
-        <textarea placeholder="Descrizione" style={inputStyle} />
+        <input
+          placeholder="Titolo (es. Trilocale centro Milano)"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+          style={input}
+        />
 
-        <button style={buttonStyle}>Ricevi offerte</button>
+        <input
+          placeholder="Prezzo (€)"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+          style={input}
+        />
+
+        <textarea
+          placeholder="Descrizione"
+          value={description}
+          onChange={(e) => setDescription(e.target.value)}
+          style={input}
+        />
+
+        <button style={button}>
+          Pubblica immobile
+        </button>
       </form>
+
     </div>
   );
 }
 
-const inputStyle = {
-  padding: 10,
-  border: "1px solid #ccc",
-  borderRadius: 6,
-};
-
-const buttonStyle = {
-  background: "#000",
-  color: "#fff",
+const input = {
   padding: 12,
   borderRadius: 8,
+  border: "1px solid #ccc",
+};
+
+const button = {
+  padding: 14,
+  background: "#000",
+  color: "#fff",
+  borderRadius: 8,
+  border: "none",
   cursor: "pointer",
 };
