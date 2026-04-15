@@ -28,7 +28,7 @@ export default function Home() {
         <li>Ricevi offerte anonime</li>
         <li>Scegli se e quando rispondere</li>
       </ol>
-   <Link href="/publish" style={{
+   <a href="https://buy.stripe.com/fZucN65Z2g1deiOcQXbEA02" style={{
   display: "inline-block",
   padding: 10,
   marginTop: 20,
@@ -37,7 +37,7 @@ export default function Home() {
   textDecoration: "none"
 }}>
   Pubblica immobile
-</Link>
+</a>
     </div>
   );
 }
