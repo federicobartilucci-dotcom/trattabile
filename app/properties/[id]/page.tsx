@@ -10,7 +10,8 @@ export default function PropertyDetail({ params }: any) {
     fetch("/api/properties")
       .then((res) => res.json())
       .then((data) => {
-        setProperty(data[params.id]);
+       const found = data.find((p: any) => p.id === params.id);
+setProperty(found);
       });
   }, [params.id]);
 
