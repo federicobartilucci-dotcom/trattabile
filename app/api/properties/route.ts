@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-// 🔥 IMPORTANTE: export
+// 🔥 database in memoria
 export let properties: any[] = [];
 
 export async function GET() {
@@ -10,11 +10,33 @@ export async function GET() {
 export async function POST(req: Request) {
   const body = await req.json();
 
-  properties.push({
-    id: properties.length.toString(), // id semplice
-    ...body,
-    offers: [],
-  });
+  // 👉 creazione immobile
+  if (body.type === "property") {
+    const newProperty = {
+      id: Date.now().toString(),
+      title: body.title,
+      price: body.price,
+      description: body.description,
+      offers: [],
+    };
 
-  return NextResponse.json({ success: true });
+    properties.push(newProperty);
+
+    return NextResponse.json({ success: true });
+  }
+
+  // 👉 aggiunta offerta
+  if (body.type === "offer") {
+    const property = properties.find((p) => p.id === body.id);
+
+    if (!property) {
+      return NextResponse.json({ error: "Not found" });
+    }
+
+    property.offers.push(body.offer);
+
+    return NextResponse.json({ success: true });
+  }
+
+  return NextResponse.json({ error: "Invalid request" });
 }
