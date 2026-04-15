@@ -5,26 +5,26 @@ export default function PublishPage() {
     <div style={{ padding: "100px 20px", maxWidth: 800, margin: "0 auto" }}>
 
       {/* HEADER */}
-      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 40 }}>
-        <div>
-          <div style={{ fontSize: 20, fontWeight: "bold" }}>TRATTABILE</div>
-          <div style={{ fontSize: 12, color: "#777" }}>
-            Offerte immobiliari riservate
-          </div>
-        </div>
+<div style={{ display: "flex", justifyContent: "space-between", marginBottom: 40 }}>
+  <div>
+    <div style={{ fontSize: 20, fontWeight: "bold" }}>TRATTABILE</div>
+    <div style={{ fontSize: 12, color: "#777" }}>
+      Offerte immobiliari riservate
+    </div>
+  </div>
 
-        <button
-          style={{
-            background: "transparent",
-            border: "1px solid #ddd",
-            padding: "8px 14px",
-            borderRadius: 8,
-            cursor: "pointer",
-          }}
-        >
-          Accedi
-        </button>
-      </div>
+  <button
+    style={{
+      background: "transparent",
+      border: "1px solid #ddd",
+      padding: "8px 14px",
+      borderRadius: 8,
+      cursor: "pointer",
+    }}
+  >
+    Accedi
+  </button>
+</div>
 
       {/* TITOLO */}
       <h1 style={{ fontSize: 40, fontWeight: "bold" }}>
