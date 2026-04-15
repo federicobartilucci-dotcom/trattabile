@@ -38,14 +38,17 @@ maxWidth: 800,
       <div style={{ fontSize: 20, fontWeight: "bold" }}>
         TRATTABILE
       </div>
-      <div style={{ fontSize: 12, color: "#777" }}>
-        Offerte immobiliari riservate
-         background: "transparent",
+     <div style={{ 
+  fontSize: 12, 
+  color: "#777",
+  background: "transparent",
   border: "1px solid #ddd",
   padding: "8px 14px",
   borderRadius: 8,
   cursor: "pointer"
 }}>
+  Offerte immobiliari riservate
+</div>
       </div>
     </div>
 <button style={{
