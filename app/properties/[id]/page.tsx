@@ -10,17 +10,11 @@ export default function PropertyDetail() {
     fetch("/api/properties")
       .then((res) => res.json())
       .then((data) => {
-      useEffect(() => {
-  fetch("/api/properties")
-    .then((res) => res.json())
-    .then((data) => {
-      const urlParts = window.location.pathname.split("/");
-      const idFromUrl = urlParts[urlParts.length - 1];
+        const urlParts = window.location.pathname.split("/");
+        const idFromUrl = urlParts[urlParts.length - 1];
 
-      const found = data.find((p: any) => p.id === idFromUrl);
-      setProperty(found || data[0]);
-    });
-}, []);
+        const found = data.find((p: any) => p.id === idFromUrl);
+        setProperty(found || data[0]);
       });
   }, []);
 
@@ -30,6 +24,10 @@ export default function PropertyDetail() {
     <div style={{ padding: 40 }}>
       <h1>{property.title}</h1>
       <p>{property.description}</p>
+
+      <h2>€ {property.price}</h2>
+
+      <hr style={{ margin: "30px 0" }} />
 
       <h3>Fai un'offerta</h3>
 
@@ -55,6 +53,9 @@ export default function PropertyDetail() {
           });
 
           alert("Offerta inviata!");
+
+          // 🔥 ricarica per vedere offerte
+          window.location.reload();
         }}
         style={{
           padding: "10px 20px",
@@ -65,6 +66,16 @@ export default function PropertyDetail() {
       >
         Invia offerta
       </button>
+
+      {/* 🔥 MOSTRA OFFERTE */}
+      {property.offers && property.offers.length > 0 && (
+        <div style={{ marginTop: 30 }}>
+          <h3>Offerte ricevute</h3>
+          {property.offers.map((o: any, i: number) => (
+            <p key={i}>€ {o}</p>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
