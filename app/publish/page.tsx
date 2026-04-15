@@ -46,7 +46,7 @@ maxWidth: 800,
   padding: "8px 14px",
   borderRadius: 8,
   cursor: "pointer",
-}}
+}}>
   Offerte immobiliari riservate
 </div>
       </div>
