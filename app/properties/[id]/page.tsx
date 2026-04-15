@@ -1,48 +1,55 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useParams } from "next/navigation";
 
-export default function PropertyDetail() {
-  const params = useParams();
+export default function PropertyDetail({ params }: any) {
   const [property, setProperty] = useState<any>(null);
+  const [offer, setOffer] = useState("");
 
   useEffect(() => {
     fetch("/api/properties")
       .then((res) => res.json())
       .then((data) => {
-        const found = data[params.id as any];
-        setProperty(found);
+        setProperty(data[params.id]);
       });
-  }, []);
+  }, [params.id]);
 
-  if (!property) return <p style={{ padding: 40 }}>Caricamento...</p>;
+  if (!property) return <div style={{ padding: 40 }}>Caricamento...</div>;
 
   return (
-    <div style={{ maxWidth: 900, margin: "0 auto", padding: 40 }}>
+    <div style={{ padding: 40 }}>
+      <h1>{property.title}</h1>
+      <p>Prezzo: {property.price}€</p>
+      <p>{property.description}</p>
 
-      <div style={{ height: 300, background: "#ddd", borderRadius: 10 }} />
+      <hr style={{ margin: "30px 0" }} />
 
-      <h1 style={{ marginTop: 20 }}>{property.title}</h1>
+      <h2>Fai un'offerta</h2>
 
-      <h2 style={{ marginTop: 10 }}>€ {property.price}</h2>
+      <input
+        placeholder="Inserisci offerta"
+        value={offer}
+        onChange={(e) => setOffer(e.target.value)}
+        style={{
+          padding: 10,
+          border: "1px solid #ccc",
+          borderRadius: 6,
+          marginRight: 10,
+        }}
+      />
 
-      <p style={{ marginTop: 20, color: "#555" }}>
-        {property.description}
-      </p>
-
-      <button style={{
-        marginTop: 30,
-        padding: 14,
-        background: "#000",
-        color: "#fff",
-        borderRadius: 8,
-        border: "none",
-        cursor: "pointer"
-      }}>
-        Fai un'offerta anonima
+      <button
+        onClick={() => alert("Offerta inviata (demo)")}
+        style={{
+          padding: "10px 20px",
+          background: "#000",
+          color: "#fff",
+          borderRadius: 6,
+          border: "none",
+        }}
+      >
+        Invia offerta
       </button>
-
     </div>
   );
 }
