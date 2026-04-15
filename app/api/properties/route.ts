@@ -8,6 +8,11 @@ export async function GET() {
 
 export async function POST(req: Request) {
   const body = await req.json();
-  properties.push(body);
+
+  properties.push({
+    ...body,
+    offers: [],
+  });
+
   return NextResponse.json({ success: true });
 }
