@@ -10,7 +10,17 @@ export default function PropertyDetail() {
     fetch("/api/properties")
       .then((res) => res.json())
       .then((data) => {
-        setProperty(data[0]); // 🔥 PRENDE SEMPRE IL PRIMO
+      useEffect(() => {
+  fetch("/api/properties")
+    .then((res) => res.json())
+    .then((data) => {
+      const urlParts = window.location.pathname.split("/");
+      const idFromUrl = urlParts[urlParts.length - 1];
+
+      const found = data.find((p: any) => p.id === idFromUrl);
+      setProperty(found || data[0]);
+    });
+}, []);
       });
   }, []);
 
