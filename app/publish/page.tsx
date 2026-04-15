@@ -2,40 +2,14 @@
 
 export default function PublishPage() {
   return (
-    <div
-      style={{
-        padding: "100px 20px",
-        maxWidth: 800,
-        margin: "0 auto",
-        fontFamily: "Arial, sans-serif",
-      }}
-    >
-      {/* HEADER */}
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          marginBottom: 40,
-        }}
-      >
-        <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
-          <div>
-            <div style={{ fontSize: 20, fontWeight: "bold" }}>
-              TRATTABILE
-            </div>
+    <div style={{ padding: "100px 20px", maxWidth: 800, margin: "0 auto" }}>
 
-            <div
-              style={{
-                fontSize: 12,
-                color: "#777",
-                border: "1px solid #ddd",
-                padding: "8px 14px",
-                borderRadius: 8,
-              }}
-            >
-              Offerte immobiliari riservate
-            </div>
+      {/* HEADER */}
+      <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 40 }}>
+        <div>
+          <div style={{ fontSize: 20, fontWeight: "bold" }}>TRATTABILE</div>
+          <div style={{ fontSize: 12, color: "#777" }}>
+            Offerte immobiliari riservate
           </div>
         </div>
 
@@ -53,91 +27,61 @@ export default function PublishPage() {
       </div>
 
       {/* TITOLO */}
-      <h1
-        style={{
-          fontSize: 48,
-          lineHeight: 1.2,
-          fontWeight: "bold",
-        }}
-      >
+      <h1 style={{ fontSize: 40, fontWeight: "bold" }}>
         Vendi casa senza esporti.
       </h1>
 
-      <p
-        style={{
-          fontSize: 16,
-          lineHeight: 1.5,
-          color: "#555",
-          marginBottom: 30,
-        }}
-      >
-        Ricevi offerte anonime da acquirenti verificati e decidi tu se e quando
-        farti contattare.
+      <p style={{ color: "#555", marginTop: 10 }}>
+        Ricevi offerte anonime da acquirenti verificati.
       </p>
 
-      {/* BOX VALORE */}
+      {/* BOX */}
       <div
         style={{
-          background: "#f9f9f9",
-          borderRadius: 16,
-          padding: 25,
-          marginBottom: 40,
-          boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+          background: "#f5f5f5",
+          padding: 20,
+          borderRadius: 10,
+          marginTop: 30,
         }}
       >
-        <p>
-          <strong>Privacy totale:</strong> i tuoi dati non sono pubblici
-        </p>
-        <p>
-          <strong>Controllo totale:</strong> decidi tu se e quando rivelarti
-        </p>
-        <p>
-          <strong>Solo acquirenti reali:</strong> budget verificato
-        </p>
-        <p>
-          <strong>Nessun vincolo:</strong> nessuna offerta è obbligatoria
-        </p>
+        <p>✔️ Privacy totale</p>
+        <p>✔️ Solo acquirenti verificati</p>
+        <p>✔️ Nessun vincolo</p>
       </div>
 
       {/* FORM */}
       <form
         onSubmit={(e) => {
           e.preventDefault();
-          alert("Immobile pubblicato (demo)");
+          alert("Demo invio");
         }}
         style={{
           display: "flex",
           flexDirection: "column",
-          gap: 15,
+          gap: 10,
+          marginTop: 30,
         }}
       >
         <input placeholder="Titolo annuncio" style={inputStyle} />
         <input placeholder="Prezzo" style={inputStyle} />
-        <textarea
-          placeholder="Descrizione"
-          style={{ ...inputStyle, height: 120 }}
-        />
+        <textarea placeholder="Descrizione" style={inputStyle} />
 
-        <button style={buttonStyle}>Ricevi offerte ora</button>
+        <button style={buttonStyle}>Ricevi offerte</button>
       </form>
     </div>
   );
 }
 
 const inputStyle = {
-  padding: 12,
-  borderRadius: 6,
+  padding: 10,
   border: "1px solid #ccc",
-  fontSize: 14,
+  borderRadius: 6,
 };
 
 const buttonStyle = {
   background: "#000",
   color: "#fff",
-  padding: "16px",
-  borderRadius: 10,
-  border: "none",
+  padding: 12,
+  borderRadius: 8,
   cursor: "pointer",
-  fontSize: 16,
-  fontWeight: "bold",
 };
