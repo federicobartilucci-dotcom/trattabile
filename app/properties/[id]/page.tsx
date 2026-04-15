@@ -39,7 +39,17 @@ export default function PropertyDetail({ params }: any) {
       />
 
       <button
-        onClick={() => alert("Offerta inviata (demo)")}
+       onClick={async () => {
+  await fetch("/api/offers", {
+    method: "POST",
+    body: JSON.stringify({
+      id: params.id,
+      offer: offer,
+    }),
+  });
+
+  alert("Offerta inviata!");
+}}
         style={{
           padding: "10px 20px",
           background: "#000",
